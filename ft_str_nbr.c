@@ -6,11 +6,11 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:15:56 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/13 18:16:19 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 19:32:42 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	p_str(char *str)
 {

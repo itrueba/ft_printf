@@ -6,11 +6,11 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 17:58:16 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/13 18:04:55 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 19:32:49 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 static int	nb_len(long nb)
 {

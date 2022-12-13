@@ -6,11 +6,11 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:04:48 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/13 19:07:37 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/13 19:32:39 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "printf.h"
+#include "ft_printf.h"
 
 int	p_percent(void)
 {
