@@ -6,7 +6,7 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:11:24 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/14 11:16:58 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/15 17:26:11 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ int	p_char(int c)
 	return (1);
 }
 
-static int	hex(long nbr, char format)
+static int	hex(unsigned long long nbr, char format)
 {
 	char	*base;
 	int		len;
@@ -33,7 +33,7 @@ static int	hex(long nbr, char format)
 	return (len);
 }
 
-int	p_ptr(long nbr)
+int	p_ptr(unsigned long long nbr)
 {
 	p_char('0');
 	p_char('x');
@@ -42,5 +42,5 @@ int	p_ptr(long nbr)
 
 int	p_hex(unsigned int nbr, char format)
 {
-	return (hex((long)nbr, format));
+	return (hex((unsigned long long)nbr, format));
 }

@@ -6,7 +6,7 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:04:48 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/14 11:16:56 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/15 17:17:24 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_convert(va_list args, const char format)
 	else if (format == 's')
 		length = p_str(va_arg(args, char *));
 	else if (format == 'p')
-		length = p_ptr(va_arg(args, long));
+		length = p_ptr(va_arg(args, unsigned long long));
 	else if (format == 'd' || format == 'i')
 		length = p_nbr(va_arg(args, int));
 	else if (format == 'u')

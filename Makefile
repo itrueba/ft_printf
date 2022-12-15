@@ -1,8 +1,5 @@
 
 NAME		= libftprintf.a
-INCLUDE		= include
-LIBFTA		= libft/libft.a
-LIBFT		= libft
 CC			= gcc
 CFLAGS		= -Wall -Werror -Wextra
 RM			= rm -rf
@@ -10,24 +7,26 @@ AR			= ar rcs
 
 #Sources
 
-SRCS	=	ft_hex.c ft_printf.c ft_str_nbr.c ft_uitoa.c
+SRCS	=	ft_hex.c ft_printf.c ft_str_nbr.c
 
 OBJS	= 	$(SRCS:.c=.o)
 
 all:		$(NAME)
 
 $(NAME):	$(OBJS) 
-			@make -C $(LIBFT)
-			@$(AR) $(NAME) $(LIBFTA) $(OBJS)
+			@make -C libft
+			@cp libft/libft.a .
+			@mv libft.a $(NAME)
+			$(AR) $(NAME) $(OBJS)
 
 clean:
-			@make -C $(LIBFT) clean
+			@make -C libft clean
 			@$(RM) $(OBJS)
 
 fclean:		clean
-			@make -C $(LIBFT) fclean
-			$(RM) $(NAME)
+			@make -C libft fclean
+			$(RM) $(NAME) libft.a
 
 re:			fclean all
 
-.PHONY:		all clean fclean re norm
+.PHONY:		all clean fclean re
