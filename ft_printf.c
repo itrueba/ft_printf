@@ -6,11 +6,12 @@
 /*   By: itrueba- <itrueba-@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/12/13 18:04:48 by itrueba-          #+#    #+#             */
-/*   Updated: 2022/12/15 17:17:24 by itrueba-         ###   ########.fr       */
+/*   Updated: 2022/12/28 13:56:14 by itrueba-         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ft_printf.h"
+#include "stdio.h"
 
 int	p_percent(void)
 {
@@ -25,17 +26,17 @@ int	ft_convert(va_list args, const char format)
 	length = 0;
 	if (format == 'c')
 		length = p_char(va_arg(args, int));
-	else if (format == 's')
+	if (format == 's')
 		length = p_str(va_arg(args, char *));
-	else if (format == 'p')
+	if (format == 'p')
 		length = p_ptr(va_arg(args, unsigned long long));
-	else if (format == 'd' || format == 'i')
+	if (format == 'd' || format == 'i')
 		length = p_nbr(va_arg(args, int));
-	else if (format == 'u')
+	if (format == 'u')
 		length = p_unsigned(va_arg(args, unsigned int));
-	else if (format == 'x' || format == 'X')
+	if (format == 'x' || format == 'X')
 		length = p_hex(va_arg(args, unsigned int), format);
-	else if (format == '%')
+	if (format == '%')
 		length = p_percent();
 	return (length);
 }

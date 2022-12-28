@@ -4,8 +4,7 @@ CC			= gcc
 CFLAGS		= -Wall -Werror -Wextra
 RM			= rm -rf
 AR			= ar rcs
-
-#Sources
+LIB			= Libft
 
 SRCS	=	ft_hex.c ft_printf.c ft_str_nbr.c
 
@@ -13,19 +12,21 @@ OBJS	= 	$(SRCS:.c=.o)
 
 all:		$(NAME)
 
+%.o: %.c
+		$(CC) $(CFLAGS) -c $< -o $@
+
 $(NAME):	$(OBJS) 
-			@make -C libft
-			@cp libft/libft.a .
-			@mv libft.a $(NAME)
-			$(AR) $(NAME) $(OBJS)
+			@make -C $(LIB)
+			@mv $(LIB)/libft.a $(NAME)
+			$(AR) $@ $^
 
 clean:
-			@make -C libft clean
+			@make -C $(LIB) clean
 			@$(RM) $(OBJS)
 
 fclean:		clean
-			@make -C libft fclean
-			$(RM) $(NAME) libft.a
+			@make -C $(LIB) fclean
+			$(RM) $(NAME)
 
 re:			fclean all
 
